@@ -1,7 +1,7 @@
 {
   "name": "justecommerce-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "complete Ecommerce api",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
@@ -9,12 +9,26 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
     "express-fileupload": "^1.2.1",
     "express-mongo-sanitize": "^2.2.0",
+    "http-status-codes": "^2.2.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
-    "nodemon": "^2.0.15"
-  }
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbubemi22/newEcomerceAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbubemi22/newEcomerceAPI/issues"
+  },
+  "homepage": "https://github.com/gbubemi22/newEcomerceAPI#readme"
 }
