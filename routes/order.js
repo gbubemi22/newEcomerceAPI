@@ -80,12 +80,23 @@ router.get('/', async (req, res) =>{
         const orders = await Order.find({});
         res.status(StatusCodes.OK).json({ orders, count: orders.length })   
     } catch (error) {
-       res.status(StatusCodes.) 
+       res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+           error: 'Something went wrong'
+       }) 
     }
    
 })
 
 
 router.get('/:id', async (req, res) => {
-    const { id: orderId } =  req.params;
+    try {
+        const { id: orderId } =  req.params;
+        const order = await Order.findOne({ _id: orderId})
+        if(!order) {
+            throw new CustomError.BadRequestError()
+        }
+    } catch (error) {
+        
+    }
+    
 })

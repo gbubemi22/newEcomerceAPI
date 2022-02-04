@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Feb 04 2022 15:23:39 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* models/Order.js
+* routes/product.js
+
+
+Created files:
+* .autogit/logs/log-3-1-2022-4-6-41.txt
+* routes/order.js
+
+
+Deleted files:
+
+
+Renamed files:
