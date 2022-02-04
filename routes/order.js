@@ -93,10 +93,19 @@ router.get('/:id', async (req, res) => {
         const { id: orderId } =  req.params;
         const order = await Order.findOne({ _id: orderId})
         if(!order) {
-            throw new CustomError.BadRequestError()
+            throw new CustomError.NotFoundError(`No order with id ${orderId}`)
+
         }
+         // from utils 
+        checkPermission(req.user, order.user);
+        res.status(StatusCodes.OK).json({ order });
     } catch (error) {
         
     }
     
+})
+
+
+router.get('/showAllMyOrders', async (req, res) =>{
+    const orders = await Order.find({ user: req.user.userId}) 
 })
